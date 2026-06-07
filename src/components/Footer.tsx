@@ -1,5 +1,5 @@
 import { MouseEvent } from 'react';
-import { Linkedin, Mail, ShieldAlert, Github, Instagram, MessageSquare } from 'lucide-react';
+import { Linkedin, Mail, ShieldAlert, Github, Instagram, MessageSquare, Workflow } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,9 +24,17 @@ export default function Footer() {
           
           {/* Brand block (5 cols) */}
           <div className="md:col-span-5 text-left space-y-4">
-            <span className="font-sans font-extrabold text-xl tracking-tight text-white flex items-center">
-              Malik <span className="text-cyan-400 font-light mx-1">&amp;</span> Co.
-            </span>
+            <div className="flex items-center space-x-2.5">
+              {/* Extremely Aesthetic Glowing Tech Logo Icon */}
+              <div className="relative flex items-center justify-center h-9 w-9 rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-400 p-[1px] shadow-[0_0_15px_rgba(59,130,246,0.25)]">
+                <div className="w-full h-full bg-[#081120] rounded-[11px] flex items-center justify-center">
+                  <Workflow className="h-4.5 w-4.5 text-cyan-400" />
+                </div>
+              </div>
+              <span className="font-sans font-extrabold text-xl tracking-tight text-white flex items-center">
+                Malik <span className="text-cyan-400 font-light mx-1">&amp;</span> Co.
+              </span>
+            </div>
             <p className="font-sans text-xs sm:text-sm text-slate-300 font-light leading-relaxed max-w-sm">
               We engineer custom, high-speed lead-generation websites, pre-qualifying AI voice agents, and direct operational automations synchronized specifically for high-growth service firms.
             </p>

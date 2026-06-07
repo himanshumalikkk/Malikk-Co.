@@ -1,5 +1,5 @@
 import { useState, useEffect, MouseEvent } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Workflow } from 'lucide-react';
 
 interface HeaderProps {
   activeSection: string;
@@ -55,17 +55,22 @@ export default function Header({ activeSection }: HeaderProps) {
         <a 
           href="#home"
           onClick={(e) => handleNavClick(e, '#home')}
-          className="flex items-center space-x-1.5 group focus:outline-none"
+          className="flex items-center space-x-2.5 group focus:outline-none"
           id="nav-logo"
         >
-          <span className="font-sans font-extrabold text-xl tracking-tight bg-gradient-to-r from-blue-400 via-indigo-200 to-cyan-400 bg-clip-text text-transparent flex items-center">
-            Malik <span className="text-white/60 font-light mx-1">&amp;</span> Co.
+          {/* Extremely Aesthetic Glowing Tech Logo Icon */}
+          <div className="relative flex items-center justify-center h-9 w-9 rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-400 p-[1px] shadow-[0_0_15px_rgba(59,130,246,0.25)] group-hover:shadow-[0_0_20px_rgba(34,211,238,0.45)] group-hover:scale-105 transition-all duration-300">
+            <div className="w-full h-full bg-[#081120] rounded-[11px] flex items-center justify-center">
+              <Workflow className="h-4.5 w-4.5 text-cyan-400 group-hover:text-white transition-colors duration-300" />
+            </div>
+          </div>
+          <span className="font-sans font-extrabold text-xl tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent flex items-center">
+            Malik <span className="text-cyan-400 font-light mx-1 group-hover:rotate-12 transition-transform duration-300">&amp;</span> Co.
           </span>
-          <span className="h-1.5 w-1.5 rounded-full bg-blue-500 self-end mb-1 group-hover:scale-140 group-hover:bg-cyan-400 transition-all duration-200 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8" id="nav-desktop">
+        <nav className="hidden md:flex items-center space-x-4 lg:space-x-8" id="nav-desktop">
           {navItems.map((item) => (
             <a
               key={item.name}
@@ -117,9 +122,16 @@ export default function Header({ activeSection }: HeaderProps) {
         >
           <div>
             <div className="flex items-center justify-between mb-12 border-b border-white/5 pb-6">
-              <span className="font-sans font-extrabold text-xl tracking-tight bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-                Malik <span className="text-white/60 font-light">&amp;</span> Co.
-              </span>
+              <div className="flex items-center space-x-2.5">
+                <div className="relative flex items-center justify-center h-9 w-9 rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-400 p-[1px] shadow-[0_0_15px_rgba(59,130,246,0.25)]">
+                  <div className="w-full h-full bg-[#081120] rounded-[11px] flex items-center justify-center">
+                    <Workflow className="h-4.5 w-4.5 text-cyan-400" />
+                  </div>
+                </div>
+                <span className="font-sans font-extrabold text-xl tracking-tight bg-gradient-to-r from-white to-slate-350 bg-clip-text text-transparent flex items-center">
+                  Malik <span className="text-cyan-400 font-light mx-1">&amp;</span> Co.
+                </span>
+              </div>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-white focus:outline-none p-1.5 hover:bg-white/10 rounded-lg"
