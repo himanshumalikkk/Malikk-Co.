@@ -1,0 +1,6 @@
+{
+  "name": "Malik & Co.",
+  "description": "Premium digital growth agency building high-converting websites, AI voice agents, and business automation systems for service businesses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
