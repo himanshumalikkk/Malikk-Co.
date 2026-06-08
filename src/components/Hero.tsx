@@ -36,7 +36,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
   const stats = [
     { number: "50+", label: "Projects Built", desc: "Engineered and delivered" },
     { number: "AI Agent", label: "Custom Solutions", desc: "Qualified voice/text bots" },
-    { number: "15 Day", label: "Average Delivery", desc: "Rapid agile development" },
+    { number: "48h", label: "Average Delivery", desc: "Rapid agile development" },
     { number: "Global", label: "Client Support", desc: "US, UK, EU, AU availability" }
   ];
 
